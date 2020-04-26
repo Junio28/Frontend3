@@ -6,6 +6,7 @@ import { CreateUserComponent } from './componenets/user/create-user/create-user.
 import { ListClientComponent } from './componenets/client/list-client/list-client.component';
 import { CreateClientComponent } from './componenets/client/create-client/create-client.component';
 import { ListProductComponent } from './componenets/product/list-product/list-product.component';
+import { CreateProductComponent } from './componenets/product/create-product/create-product.component';
 
 
 const routes: Routes = [{
@@ -35,6 +36,10 @@ const routes: Routes = [{
 {
   path: 'producto',
   component: ListProductComponent
+},
+{
+  path: 'producto/nuevo',
+  component: CreateProductComponent
 }
 ];
 
