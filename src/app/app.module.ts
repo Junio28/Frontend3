@@ -7,6 +7,7 @@ import { MenuComponent } from './componenets/layouts/main/header/menu/menu.compo
 import { FormLoginComponent } from './componenets/user/form-login/form-login.component';
 import { ListUserComponent } from './componenets/user/list-user/list-user.component';
 import { CreateUserComponent } from './componenets/user/create-user/create-user.component';
+import { CopyrightComponent } from './componenets/layouts/main/footer/copyright/copyright.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CreateUserComponent } from './componenets/user/create-user/create-user.
     MenuComponent,
     FormLoginComponent,
     ListUserComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    CopyrightComponent
   ],
   imports: [
     BrowserModule,
