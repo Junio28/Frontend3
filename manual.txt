@@ -43,3 +43,6 @@ ng g c componenets/user/form-login
 
 Ingresar services
 ng g s services/users
+
+Crear las interfaces
+ng g i models/user-i
