@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FormLoginComponent } from './componenets/user/form-login/form-login.component';
 
 
 const routes: Routes = [{
@@ -8,7 +9,7 @@ const routes: Routes = [{
   pathMatch: 'full'
 },{
   path: 'login',
-  component: 
+  component: FormLoginComponent 
 }];
 
 @NgModule({
