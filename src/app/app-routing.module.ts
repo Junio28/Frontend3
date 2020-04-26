@@ -14,7 +14,7 @@ const routes: Routes = [{
   component: FormLoginComponent 
 },
 {
-  path: 'usuario/listar',
+  path: 'usuario',
   component: ListUserComponent
 },
 {
