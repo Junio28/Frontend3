@@ -46,3 +46,5 @@ ng g s services/users
 
 Crear las interfaces
 ng g i models/user-i
+
+Instalar cors en el backend para ir de puerto en puerto:npm install cors 

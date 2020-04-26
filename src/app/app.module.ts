@@ -16,6 +16,8 @@ import { ListTypeProductComponent } from './componenets/type-product/list-type-p
 import { CreateTypeProductComponent } from './componenets/type-product/create-type-product/create-type-product.component';
 import { ListSaleComponent } from './componenets/sale/list-sale/list-sale.component';
 import { CreateSaleComponent } from './componenets/sale/create-sale/create-sale.component';
+import { UsersService } from './services/users.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,9 +38,12 @@ import { CreateSaleComponent } from './componenets/sale/create-sale/create-sale.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    UsersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
