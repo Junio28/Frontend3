@@ -25,4 +25,8 @@ export class ListUserComponent implements OnInit {
       err => console.error(err)
     );
   }
+
+  deleteUser(id: string){
+    console.log(id);
+  }
 }
