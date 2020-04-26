@@ -23,7 +23,7 @@ Configurar angular.js en esta parte:
             ]
 
 
-Ingresar en la página https://bootswatch.com/
+Ingresar en la pï¿½gina https://bootswatch.com/
 
 Para los componenetes se usa ng generate:
 
@@ -40,3 +40,6 @@ ng g c componenets/layouts/main/footer/copyright
 
 Generar por ejempo un login de usuario
 ng g c componenets/user/form-login
+
+Ingresar services
+ng g s services/users
