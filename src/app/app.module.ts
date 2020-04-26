@@ -15,6 +15,7 @@ import { CreateProductComponent } from './componenets/product/create-product/cre
 import { ListTypeProductComponent } from './componenets/type-product/list-type-product/list-type-product.component';
 import { CreateTypeProductComponent } from './componenets/type-product/create-type-product/create-type-product.component';
 import { ListSaleComponent } from './componenets/sale/list-sale/list-sale.component';
+import { CreateSaleComponent } from './componenets/sale/create-sale/create-sale.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ListSaleComponent } from './componenets/sale/list-sale/list-sale.compon
     CreateProductComponent,
     ListTypeProductComponent,
     CreateTypeProductComponent,
-    ListSaleComponent
+    ListSaleComponent,
+    CreateSaleComponent
   ],
   imports: [
     BrowserModule,
