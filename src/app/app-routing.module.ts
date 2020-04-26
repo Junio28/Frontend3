@@ -7,6 +7,7 @@ import { ListClientComponent } from './componenets/client/list-client/list-clien
 import { CreateClientComponent } from './componenets/client/create-client/create-client.component';
 import { ListProductComponent } from './componenets/product/list-product/list-product.component';
 import { CreateProductComponent } from './componenets/product/create-product/create-product.component';
+import { ListTypeProductComponent } from './componenets/type-product/list-type-product/list-type-product.component';
 
 
 const routes: Routes = [{
@@ -40,6 +41,10 @@ const routes: Routes = [{
 {
   path: 'producto/nuevo',
   component: CreateProductComponent
+},
+{
+  path: 'tipo_producto',
+  component: ListTypeProductComponent
 }
 ];
 

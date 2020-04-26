@@ -12,6 +12,7 @@ import { ListClientComponent } from './componenets/client/list-client/list-clien
 import { CreateClientComponent } from './componenets/client/create-client/create-client.component';
 import { ListProductComponent } from './componenets/product/list-product/list-product.component';
 import { CreateProductComponent } from './componenets/product/create-product/create-product.component';
+import { ListTypeProductComponent } from './componenets/type-product/list-type-product/list-type-product.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CreateProductComponent } from './componenets/product/create-product/cre
     ListClientComponent,
     CreateClientComponent,
     ListProductComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    ListTypeProductComponent
   ],
   imports: [
     BrowserModule,
