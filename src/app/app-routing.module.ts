@@ -4,6 +4,7 @@ import { FormLoginComponent } from './componenets/user/form-login/form-login.com
 import { ListUserComponent } from './componenets/user/list-user/list-user.component';
 import { CreateUserComponent } from './componenets/user/create-user/create-user.component';
 import { ListClientComponent } from './componenets/client/list-client/list-client.component';
+import { CreateClientComponent } from './componenets/client/create-client/create-client.component';
 
 
 const routes: Routes = [{
@@ -25,6 +26,10 @@ const routes: Routes = [{
 {
   path: 'cliente',
   component: ListClientComponent
+},
+{
+  path: 'cliente/nuevo',
+  component: CreateClientComponent
 }
 ];
 
