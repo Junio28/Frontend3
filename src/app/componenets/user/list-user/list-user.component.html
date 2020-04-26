@@ -1,4 +1,4 @@
-    <!-- <h1>Lista de Usuarios</h1>
+    <h1>Lista de Usuarios</h1>
     <a href="usuario/nuevo" class="btn btn-primary btn-block btn-signin">Añadir nuevo</a>
     <hr>
     <table class="table table-striped">
@@ -8,20 +8,28 @@
                 <th>NOMBRES</th>
                 <th>APELLIDOS</th>
                 <th>CORREO</th>
-                <th>ACCION</th>
+                <th>CONTRASEÑA</th>
+                <th>ACCIONES</th>
             </tr>
         </thead>
             <tbody>
 
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr *ngFor="let user of users">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.surname}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.password}}</td>
+                    <td><a href="" class="btn btn-warning">
+                        <i class="fa fa-edit"></i>    
+                    </a>
+                <button class="btn btn-danger">
+                    <i class="fa fa-eraser"></i>
+                </button>
+                </td>
                 </tr>
             </tbody>
-    </table> -->
+    </table>
 
 
-    {{users | json}}
+  
