@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CreateUserComponent implements OnInit {
 
-  @HostBinding('class') classes = 'row';
+  // @HostBinding('class') classes = 'form-control';
 
   user: any = {
     id: 0,
