@@ -1,4 +1,4 @@
-    <!-- <br>
+    <br>
     <h1>Lista de Clientes</h1>
     <a href="cliente/nuevo" class="btn btn-primary btn-block btn-signin">Añadir nuevo</a>
     <hr>
@@ -17,17 +17,23 @@
         </thead>
             <tbody>
 
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr *ngFor="let client of clients">
+                    <td>{{client.id}}</td>
+                    <td>{{client.name}}</td>
+                    <td>{{client.lastname}}</td>
+                    <td>{{client.email}}</td>
+                    <td>{{client.rut}}</td>
+                    <td>{{client.address}}</td>
+                    <td>{{client.phone}}</td>
+                    <td>
+                        <a href="" class="btn btn-warning">
+                            <i class="fa fa-edit"></i>    
+                        </a>
+                    <button class="btn btn-danger">
+                        <i class="fa fa-eraser"></i>
+                    </button>
+                    </td>
                 </tr>
             </tbody>
-    </table> -->
+    </table>
 
-    {{clients | json}}
