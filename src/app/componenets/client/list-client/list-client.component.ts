@@ -19,7 +19,7 @@ export class ListClientComponent implements OnInit {
     this.clientsService.getClients().subscribe(
       res=> {
         this.clients = res;
-        console.log(this.clients);
+        // console.log(this.clients);
 
       },
       err => console.error(err)
