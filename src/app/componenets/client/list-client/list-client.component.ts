@@ -25,4 +25,8 @@ export class ListClientComponent implements OnInit {
       err => console.error(err)
     );
   }
+  
+  deleteClient(id: string){
+    console.log(id);
+  }
 }
