@@ -12,4 +12,8 @@ export class TypeProductsService {
   getTypeProducts(){
     return this.http.get(`${this.API_URI}/type_products`);
   }
+
+  deleteTypeProduct(id: string){
+    return this.http.delete(`${this.API_URI}/type_products/${id}`);
+  }
 }

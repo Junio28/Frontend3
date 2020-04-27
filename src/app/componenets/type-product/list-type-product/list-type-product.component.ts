@@ -27,6 +27,14 @@ export class ListTypeProductComponent implements OnInit {
   }
 
   deleteTypeProduct(id: string){
-    console.log(id);
+    // console.log(id);
+    this.typeproductsService.deleteTypeProduct(id)
+    .subscribe(
+      res => {
+        console.log(res);
+        this.getTypeProduct();
+      },
+      err => console.error(err)
+    );
   }
 }
