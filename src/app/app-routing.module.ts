@@ -42,6 +42,10 @@ const routes: Routes = [{
   component: CreateClientComponent
 },
 {
+  path: 'cliente/editar/:id',
+  component: CreateClientComponent
+},
+{
   path: 'producto',
   component: ListProductComponent
 },

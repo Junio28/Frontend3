@@ -20,10 +20,24 @@ export class CreateClientComponent implements OnInit {
     address: '',
     phone: ''
   }
+
+  edit: boolean = false;
   constructor(private clientsService: ClientsService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    //const params = this.activatedRoute.snapshot.params;
+    const params = this.activatedRoute.snapshot.params;
+    //  console.log(params);
+     if(params.id){
+      this.clientsService.getClient(params.id)
+        .subscribe(
+          res=>{
+            console.log(res);
+            this.client =res;
+            this.edit = true;
+          },
+          err=>console.error(err)
+        )
+    }
   }
 
   saveNewClient(){
@@ -33,6 +47,18 @@ export class CreateClientComponent implements OnInit {
           this.router.navigate(['/cliente']);
         },
         err => console.error(err)
+      )
+  }
+
+  updateClient(){
+    //console.log(this.user)
+    this.clientsService.updateClient(this.client.id, this.client)
+      .subscribe(
+        res=>{
+          this.router.navigate(['/cliente']);
+          console.log(res);
+        },
+        err=> console.log(err)
       )
   }
 }

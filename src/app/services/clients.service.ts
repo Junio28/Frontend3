@@ -15,11 +15,19 @@ export class ClientsService {
     return this.http.get(`${this.API_URI}/clients`);
   }
 
+  getClient(id: string){
+    return this.http.get(`${this.API_URI}/clients/${id}`);
+  }
+
   addClient(user: ClientI){
     return this.http.post(`${this.API_URI}/clients`, user);
   }
 
   deleteClient(id: string){
     return this.http.delete(`${this.API_URI}/clients/${id}`);
+  }
+
+  updateClient(id: string | number, updatedClient: ClientI){
+    return this.http.patch(`${this.API_URI}/clients/${id}`,updatedClient);
   }
 }
