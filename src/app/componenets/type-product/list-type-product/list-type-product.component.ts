@@ -25,4 +25,8 @@ export class ListTypeProductComponent implements OnInit {
       err => console.error(err)
     );
   }
+
+  deleteTypeProduct(id: string){
+    console.log(id);
+  }
 }
