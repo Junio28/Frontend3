@@ -16,11 +16,19 @@ export class UsersService {
     return this.http.get(`${this.API_URI}/users`);
   }
 
+  getUser(id: string){
+    return this.http.get(`${this.API_URI}/users/${id}`);
+  }
+
   addUser(user: UserI){
     return this.http.post(`${this.API_URI}/users`, user);
   }
 
   deleteUser(id: string){
     return this.http.delete(`${this.API_URI}/users/${id}`);
+  }
+
+  updateUser(id: string | number, updatedUser: UserI){
+    return this.http.patch(`${this.API_URI}/users/${id}`,updatedUser);
   }
 }

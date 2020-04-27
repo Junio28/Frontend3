@@ -37,4 +37,10 @@ export class ListUserComponent implements OnInit {
         err => console.error(err)
       );
   }
+
+
+  // editUser(id: string){
+  //   console.log(id);
+    
+  // }
 }

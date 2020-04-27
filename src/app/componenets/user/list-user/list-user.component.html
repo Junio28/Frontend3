@@ -20,7 +20,7 @@
                     <td>{{user.surname}}</td>
                     <td>{{user.email}}</td>
                     <td>{{user.password}}</td>
-                    <td><a href="" class="btn btn-warning">
+                    <td><a [routerLink]="['/usuario/editar', user.id]" class="btn btn-warning">
                         <i class="fa fa-edit"></i>    
                     </a>
                 <button class="btn btn-danger" (click)="deleteUser(user.id)">

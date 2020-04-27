@@ -18,10 +18,24 @@ export class CreateUserComponent implements OnInit {
     email: '',
     password: ''
   }
+
+  edit: boolean = false;
   constructor(private usersService: UsersService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    //const params = this.activatedRoute.snapshot.params;
+    const params = this.activatedRoute.snapshot.params;
+    // console.log(params);
+    if(params.id){
+      this.usersService.getUser(params.id)
+        .subscribe(
+          res=>{
+            console.log(res);
+            this.user =res;
+            this.edit = true;
+          },
+          err=>console.error(err)
+        )
+    }
   }
 
   saveNewUser(){
@@ -31,6 +45,18 @@ export class CreateUserComponent implements OnInit {
           this.router.navigate(['/usuario']);
         },
         err => console.error(err)
+      )
+  }
+
+  updateUser(){
+    //console.log(this.user)
+    this.usersService.updateUser(this.user.id, this.user)
+      .subscribe(
+        res=>{
+          this.router.navigate(['/usuario']);
+          console.log(res);
+        },
+        err=> console.log(err)
       )
   }
 

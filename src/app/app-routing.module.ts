@@ -30,6 +30,10 @@ const routes: Routes = [{
   component: CreateUserComponent
 },
 {
+  path: 'usuario/editar/:id',
+  component: CreateUserComponent
+},
+{
   path: 'cliente',
   component: ListClientComponent
 },
