@@ -18,6 +18,7 @@ import { CreateTypeProductComponent } from './componenets/type-product/create-ty
 import { ListSaleComponent } from './componenets/sale/list-sale/list-sale.component';
 import { CreateSaleComponent } from './componenets/sale/create-sale/create-sale.component';
 import { UsersService } from './services/users.service';
+import { ClientsService } from './services/clients.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -44,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule
   ],
   providers: [
-    UsersService
+    UsersService,
+    ClientsService
   ],
   bootstrap: [AppComponent]
 })
