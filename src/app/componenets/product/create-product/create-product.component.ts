@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../../services/products.service';
+import { TypeProductI } from '../../../models/type-product-i';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TypeProductsService } from 'src/app/services/type-products.service';
 
 @Component({
   selector: 'app-create-product',
@@ -8,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./create-product.component.css']
 })
 export class CreateProductComponent implements OnInit {
-
+  typeproducts: any = [];
    // @HostBinding('class') classes = 'row';
   product: any = {
     id: 0,
@@ -21,7 +23,7 @@ export class CreateProductComponent implements OnInit {
   }
 
   edit: boolean = false;
-  constructor(private productsService: ProductsService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private productsService: ProductsService,private typeproductsService:TypeProductsService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
         const params = this.activatedRoute.snapshot.params;
@@ -37,6 +39,7 @@ export class CreateProductComponent implements OnInit {
                     err=>console.error(err)
                   )
               }
+              this.getTypeProduct();
   }
 
   saveNewProduct(){
@@ -47,6 +50,17 @@ export class CreateProductComponent implements OnInit {
         },
         err => console.error(err)
       )
+  }
+
+  getTypeProduct(){
+    this.typeproductsService.getTypeProducts().subscribe(
+      res=> {
+        this.typeproducts = res;
+        console.log(this.typeproducts);
+
+      },
+      err => console.error(err)
+    );
   }
 
   updateProduct(){
