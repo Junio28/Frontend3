@@ -19,8 +19,8 @@ export class ClientsService {
     return this.http.get(`${this.API_URI}/clients/${id}`);
   }
 
-  addClient(user: ClientI){
-    return this.http.post(`${this.API_URI}/clients`, user);
+  addClient(client: ClientI){
+    return this.http.post(`${this.API_URI}/clients`, client);
   }
 
   deleteClient(id: string){

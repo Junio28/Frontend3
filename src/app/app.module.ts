@@ -20,6 +20,7 @@ import { CreateSaleComponent } from './componenets/sale/create-sale/create-sale.
 import { UsersService } from './services/users.service';
 import { ClientsService } from './services/clients.service';
 import { TypeProductsService } from './services/type-products.service';
+import { ProductsService } from './services/products.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -48,7 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     UsersService,
     ClientsService,
-    TypeProductsService
+    TypeProductsService,
+    ProductsService
   ],
   bootstrap: [AppComponent]
 })
