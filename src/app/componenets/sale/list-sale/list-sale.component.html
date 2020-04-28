@@ -29,8 +29,8 @@
                     <td>{{sale.userId}}</td>
                     <td>{{sale.clientId}}</td>
                     <td>
-                        <a href="" class="btn btn-warning">
-                            <i class="fa fa-edit"></i>    
+                        <a [routerLink]="['/venta/editar', sale.id]" class="btn btn-warning">
+                            <i class="fa fa-edit" ></i>    
                         </a>
                     <button class="btn btn-danger" (click)="deleteSale(sale.id)">
                         <i class="fa fa-eraser"></i>

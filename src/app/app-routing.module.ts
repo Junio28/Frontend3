@@ -76,6 +76,10 @@ const routes: Routes = [{
 {
   path: 'venta/nuevo',
   component: CreateSaleComponent
+},
+{
+  path: 'venta/editar/:id',
+  component: CreateSaleComponent
 }
 ];
 
