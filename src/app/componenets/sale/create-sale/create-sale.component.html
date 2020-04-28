@@ -2,29 +2,37 @@
     <form>
           <div class="form-group">
             <label for="">Fecha</label>
-            <input type="date" class="form-control" id="" name="" placeholder="Ingrese su Nombre">
+            <input type="date"  [(ngModel)]="sale.date" class="form-control" id="date" name="date" placeholder="Ingrese su Nombre">
           </div>
           <div class="form-group">
             <label for="">Descuento</label>
-            <input type="number" class="form-control" id="" name="" placeholder="Ingrese el descuento">
+            <input type="number" [(ngModel)]="sale.discount" class="form-control" id="discount" name="discount" placeholder="Ingrese el descuento">
           </div>
           <div class="form-group">
             <label for="">Subtotal</label>
-            <input type="number" class="form-control" id="" name="" placeholder="Ingrese el subtotal">
+            <input type="number" [(ngModel)]="sale.subtotal" class="form-control" id="subtotal" name="subtotal" placeholder="Ingrese el subtotal">
           </div>
           <div class="form-group">
             <label for="">Total</label>
-            <input type="number" class="form-control" id="" name="" placeholder="Ingrese el total">
+            <input type="number" [(ngModel)]="sale.total" class="form-control" id="total" name="subtotal" placeholder="Ingrese el total">
           </div>
           <div class="form-group">
             <label for="">Creado</label>
-            <input type="number" class="form-control" id="" name="" >
+            <input type="number" [(ngModel)]="sale.created" class="form-control" id="created" name="created" >
           </div>
           <div class="form-group">
             <label for="">Editado</label>
-            <input type="number" class="form-control" id="" name="">
+            <input type="number" [(ngModel)]="sale.updated" class="form-control" id="updated" name="updated">
           </div>
           <div class="form-group">
+            <label for="">Usuario</label>
+            <input type="number" [(ngModel)]="sale.userId" class="form-control" id="userId" name="userId">
+          </div>
+          <div class="form-group">
+            <label for="">Cliente</label>
+            <input type="number" [(ngModel)]="sale.clientId" class="form-control" id="clientId" name="clientId">
+          </div>
+          <!-- <div class="form-group">
             <select  class="form-control" id="exampleSelect2">
               <option>Seleccione el Usuario</option>
               <option></option>
@@ -35,6 +43,6 @@
               <option>Seleccione el Cliente</option>
               <option></option>
             </select>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block btn-signin">Guardar</button>
+          </div> -->
+          <button type="submit" class="btn btn-primary btn-block btn-signin" (click)="saveNewSale()">Guardar</button>
       </form>
