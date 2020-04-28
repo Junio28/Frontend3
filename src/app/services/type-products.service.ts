@@ -15,11 +15,19 @@ export class TypeProductsService {
     return this.http.get(`${this.API_URI}/type_products`);
   }
 
+  getTypeProduct(id: string){
+    return this.http.get(`${this.API_URI}/type_products/${id}`);
+  }
+
   addTypeProduct(typeproduct: TypeProductI){
     return this.http.post(`${this.API_URI}/type_products`, typeproduct);
   }
 
   deleteTypeProduct(id: string){
     return this.http.delete(`${this.API_URI}/type_products/${id}`);
+  }
+
+  updateTypeProduct(id: string | number, updatedTypeProduct: TypeProductI){
+    return this.http.patch(`${this.API_URI}/type_products/${id}`,updatedTypeProduct);
   }
 }

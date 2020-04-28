@@ -1,5 +1,5 @@
     <h1>Lista de Tipo Productos</h1>
-    <a href="tipo_producto/nuevo" class="btn btn-primary btn-block btn-signin">Añadir nuevo</a>
+    <a routerLink="/tipo_producto/nuevo" class="btn btn-primary btn-block btn-signin">Añadir nuevo</a>
     <hr>
     <table class="table table-striped">
         <thead>
@@ -15,7 +15,7 @@
                     <td>{{typeproduct.id}}</td>
                     <td>{{typeproduct.name}}</td>
                     <td>
-                        <a href="" class="btn btn-warning">
+                        <a [routerLink]="['/tipo_producto/editar', typeproduct.id]" class="btn btn-warning">
                             <i class="fa fa-edit"></i>    
                         </a>
                     <button class="btn btn-danger" (click)="deleteTypeProduct(typeproduct.id)">

@@ -14,10 +14,24 @@ export class CreateTypeProductComponent implements OnInit {
     id: 0,
     name: ''
   }
+
+  edit: boolean = false;
   constructor(private typeproductsService: TypeProductsService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    //const params = this.activatedRoute.snapshot.params;
+        const params = this.activatedRoute.snapshot.params;
+    	    //  console.log(params);
+          if(params.id){
+            this.typeproductsService.getTypeProduct(params.id)
+              .subscribe(
+                res=>{
+                  console.log(res);
+                  this.typeproduct =res;
+                  this.edit = true;
+                },
+                err=>console.error(err)
+              )
+          }
   }
 
   saveNewTypeProduct(){
@@ -27,6 +41,18 @@ export class CreateTypeProductComponent implements OnInit {
           this.router.navigate(['/tipo_producto']);
         },
         err => console.error(err)
+      )
+  }
+
+  updateTypeProduct(){
+    //console.log(this.user)
+    this.typeproductsService.updateTypeProduct(this.typeproduct.id, this.typeproduct)
+      .subscribe(
+        res=>{
+          this.router.navigate(['/tipo_producto']);
+          console.log(res);
+        },
+        err=> console.log(err)
       )
   }
 }

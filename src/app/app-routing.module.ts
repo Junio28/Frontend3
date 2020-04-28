@@ -62,6 +62,10 @@ const routes: Routes = [{
   component: CreateTypeProductComponent
 },
 {
+  path: 'tipo_producto/editar/:id',
+  component: CreateTypeProductComponent
+},
+{
   path: 'venta',
   component: ListSaleComponent
 },
